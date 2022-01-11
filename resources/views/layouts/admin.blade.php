@@ -1,84 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<!doctype html>
+<html lang="en" class="no-js">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<meta name="theme-color" content="#3e454c">
+	
+	<title>Car Rental Portal | Admin Dashboard</title>
 
-    <title>Startmin - Bootstrap Admin Theme</title>
 
-    <!-- Bootstrap Core CSS -->
-    <link href="{{ asset('backend/css/bootstrap.min.css') }}" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="{{ asset('backend/css/metisMenu.min.css') }}" rel="stylesheet">
 
-    <!-- Timeline CSS -->
-    <link href="{{ asset('backend/css/timeline.css') }}" rel="stylesheet">
+	<!-- Font awesome -->
+	<link rel="stylesheet" href="admin/css/font-awesome.min.css">
+	<!-- Sandstone Bootstrap CSS -->
+	<link rel="stylesheet" href="admin/css/bootstrap.min.css">
+	<!-- Bootstrap Datatables -->
+	<link rel="stylesheet" href="admin/css/dataTables.bootstrap.min.css">
+	<!-- Bootstrap social button library -->
+	<link rel="stylesheet" href="admin/css/bootstrap-social.css">
+	<!-- Bootstrap select -->
+	<link rel="stylesheet" href="admin/css/bootstrap-select.css">
+	<!-- Bootstrap file input -->
+	<link rel="stylesheet" href="admin/css/fileinput.min.css">
+	<!-- Awesome Bootstrap checkbox -->
+	<link rel="stylesheet" href="../assets/css/style.css" type="text/css">
+	<link rel="stylesheet" href="admin/css/awesome-bootstrap-checkbox.css">
+	<!-- Admin Stye -->
+	<link rel="stylesheet" href="admin/css/style.css">
 
-    <!-- Custom CSS -->
-    <link href="{{ asset('backend/css/startmin.css') }}" rel="stylesheet">
-
-    <!-- Morris Charts CSS -->
-    <link href="{{ asset('backend/css/morris.css') }}" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="{{ asset('backend/css/font-awesome.min.css') }}" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
 </head>
 
 <body>
+@include('admin/includes/header')
 
-    <div id="wrapper">
+	<div class="ts-main-content">
+@include('admin/includes/leftbar')
 
-        <!-- Navigation -->
-        @include('layouts.bagian.navbar')
-        <!-- /.navbar-top-links -->
-        @include('layouts.bagian.sidebar')
+		<div class="content-wrapper">
+			<div class="container-fluid">
 
-        <!-- /.nav-second-level -->
-        </li>
-        </ul>
-    </div>
-    </div>
-    </nav>
-
-    <div id="page-wrapper">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1 class="page-header">Dashboard</h1>
-                </div>
-                <!-- /.col-lg-12 -->
-            </div>
+				<div class="row">
+					<div class="col-md-12">
 
 
-            <!-- jQuery -->
-            <script src="{{ asset('backend/js/jquery.min.js') }}"></script>
+@yield('content')
 
-            <!-- Bootstrap Core JavaScript -->
-            <script src="{{ asset('backend/js/bootstrap.min.js') }}"></script>
 
-            <!-- Metis Menu Plugin JavaScript -->
-            <script src="{{ asset('backend/js/metisMenu.min.js') }}"></script>
+			</div>
+		</div>
+	</div>
 
-            <!-- Morris Charts JavaScript -->
-            <script src="{{ asset('backend/js/raphael.min.js') }}"></script>
-            <script src="{{ asset('backend/js/morris.min.js') }}"></script>
-            <script src="{{ asset('backend/js/morris-data.js') }}"></script>
+	<!-- Loading Scripts -->
+	<script src="admin/js/jquery.min.js"></script>
+	<script src="admin/js/bootstrap-select.min.js"></script>
+	<script src="admin/js/bootstrap.min.js"></script>
+	<script src="admin/js/jquery.dataTables.min.js"></script>
+	<script src="admin/js/dataTables.bootstrap.min.js"></script>
+	<script src="admin/js/Chart.min.js"></script>
+	<script src="admin/js/fileinput.js"></script>
+	<script src="admin/js/chartData.js"></script>
+	<script src="admin/js/main.js"></script>
+	
+	<script>
+		
+	window.onload = function(){
+    
+		// Line chart from swirlData for dashReport
+		var ctx = document.getElementById("dashReport").getContext("2d");
+		window.myLine = new Chart(ctx).Line(swirlData, {
+			responsive: true,
+			scaleShowVerticalLines: false,
+			scaleBeginAtZero : true,
+			multiTooltipTemplate: "<%if (label){%><%=label%>: <%}%><%= value %>",
+		}); 
+		
+		// Pie Chart from doughutData
+		var doctx = document.getElementById("chart-area3").getContext("2d");
+		window.myDoughnut = new Chart(doctx).Pie(doughnutData, {responsive : true});
 
-            <!-- Custom Theme JavaScript -->
-            <script src="" {{ asset('backend/js/startmin.js') }}"></script>
+		// Dougnut Chart from doughnutData
+		var doctx = document.getElementById("chart-area4").getContext("2d");
+		window.myDoughnut = new Chart(doctx).Doughnut(doughnutData, {responsive : true});
 
+	}
+	</script>
 </body>
-
 </html>
