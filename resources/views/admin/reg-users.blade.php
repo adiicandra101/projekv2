@@ -1,17 +1,17 @@
 @extends('layouts.admin')
 
 @section('content')
-<h2 class="page-title">USER DETAILS</h2>	
+<h2 class="page-title">USER DETAILS</h2>
 
 
  <div class="container">
     <table border="1" class="table datatable-pagination">
         <tr>
             <th> Sr # </th>
-            <th> Username </th>
+            <th> Nama </th>
             <th> Email </th>
-            <th> Number </th>
-            <th> City </th>
+            <th> No HP </th>
+            <th> tempat tinggal </th>
             <th> created_at </th>
             <th> updated_at </th>
 

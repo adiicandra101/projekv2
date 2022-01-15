@@ -1,43 +1,31 @@
 <header>
     <div class="default-header">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 col-md-2">
-                    <div class="logo"> <a href="#"><img src="../assets/images/logg.png" alt="image" /></a> </div>
+        <div class="default-header">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-1 col-md-1">
+                  <div class="logo"> <a href="#"><img src="img/logo.gif" alt="image"/></a> </div>
                 </div>
-                <div class="col-sm-9 col-md-10">
-                    <div class="header_info">
-                        <div class="header_widgets">
-                            <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
-                            <p class="uppercase_text">For Support Mail us : </p>
-                            <a href="mailto:info@example.com">usalahore.00777@gmail.com</a>
-                        </div>
-                        <div class="header_widgets">
-                            <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
-                            <p class="uppercase_text">Service Helpline Call Us: </p>
-                            <a href="tel:61-1234-5678-09">+91-1122-3345-43</a>
-                        </div>
+                <div class="col-sm-11 col-md-10">
+                  <div class="header_info">
+                    <div class="header_widgets">
+                      <div class="circle_icon"> <i class="fa fa-envelope" aria-hidden="true"></i> </div>
+                      <p class="uppercase_text">Suport Email Kita : </p>
+                      <a href="mailto:info@example.com">Adichandra101@gmail.com</a> </div>
+                    <div class="header_widgets">
+                      <div class="circle_icon"> <i class="fa fa-phone" aria-hidden="true"></i> </div>
+                      <p class="uppercase_text">Jika ada masalah hub: </p>
+                      <a href="tel:61-1234-5678-09">0823-7492-1489</a> </div>
+
                         <div class="social-follow">
                             <ul>
-                                <li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus-square" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                        {{ Auth::user()->name }}
                                     </a>
-
-
                                 </li>
                             </ul>
                         </div>
-
-
-
-
                     </div>
                 </div>
             </div>

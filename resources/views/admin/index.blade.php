@@ -31,17 +31,17 @@
 						<h1 class="text-center text-bold text-light mt-4x">Sign in</h1>
 						<div class="well row pt-2x pb-3x bk-light">
 							<div class="col-md-8 col-md-offset-2">
-							
+
 
 									<label for="" class="text-uppercase text-sm">Your Username </label>
 									<input id="name" type="text" placeholder="Username" name="username" class="form-control mb">
 
 									<label for="" class="text-uppercase text-sm">Password</label>
 									<input id="pasword" type="password" placeholder="Password" name="password" class="form-control mb">
-                                    
+
 									<button class="btn btn-primary btn-block"  onclick="loginadmin()">LOGIN</button>
 <p id="demo"></p>
-								
+
 
 							</div>
 						</div>
@@ -54,17 +54,17 @@
 
 <script>
 function loginadmin(){
-  
- 
+
+
 
 var name = document.getElementById("name").value;
 var pasword = document.getElementById("pasword").value;
 
-if(name == "sidra" && pasword == "sidra"){
+if(name == "chandra" && pasword == "chandra"){
 
     window.location.href = "/dashboard";
 }
-if(name != "sidra" && pasword != "sidra"){
+if(name != "chandra" && pasword != "chandra   "){
 
 document.getElementById("demo").innerHTML = "Invalid Credentials";
 }

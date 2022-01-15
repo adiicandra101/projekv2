@@ -13,27 +13,27 @@
               <form method="POST" action="{{ route('login') }}">
               @csrf
                 <div class="form-group">
-                  <input type="email" class="form-control" name="email" placeholder="Email address*">
+                  <input type="email" class="form-control" name="email" placeholder="Masukan email*">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" name="password" placeholder="Password*">
+                  <input type="password" class="form-control" name="password" placeholder="Masukan Password*">
                 </div>
                 <div class="form-group checkbox">
                   <input type="checkbox" id="remember">
-               
+
                 </div>
                 <div class="form-group">
                   <input type="submit" name="login" value="Login" class="btn btn-block">
                 </div>
               </form>
             </div>
-           
+
           </div>
         </div>
       </div>
       <div class="modal-footer text-center">
-        <p>Don't have an account? <a href="#signupform" data-toggle="modal" data-dismiss="modal">Signup Here</a></p>
-        <p><a href="#forgotpassword" data-toggle="modal" data-dismiss="modal">Forgot Password ?</a></p>
+        <p>Tidak punya akun? <a href="#signupform" data-toggle="modal" data-dismiss="modal">Daftar disini</a></p>
+        <p><a href="#forgotpassword" data-toggle="modal" data-dismiss="modal">lupa Password ?</a></p>
       </div>
     </div>
   </div>
